@@ -3497,3 +3497,150 @@ Migrating to AddStateToTicTacToe (20160427011933)
   [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Wed, 27 Apr 2016 01:25:48 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Wed, 27 Apr 2016 01:25:48 UTC +00:00]]
   [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
   [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (3.0ms)[0m  INSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "tic_tac_toes" SET "board" = ?, "updated_at" = ? WHERE "tic_tac_toes"."id" = 1  [["board", "[[null,null,null],[null,\"X\",null],[null,null,null]]"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "tic_tac_toes" SET "current_player" = ?, "current_marker" = ?, "updated_at" = ? WHERE "tic_tac_toes"."id" = 1[0m  [["current_player", "Player 2"], ["current_marker", "O"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.6ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "tic_tac_toes" SET "board" = ?, "updated_at" = ? WHERE "tic_tac_toes"."id" = 1[0m  [["board", "[[\"X\",null,null],[null,null,null],[null,null,null]]"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "tic_tac_toes" SET "current_player" = ?, "current_marker" = ?, "updated_at" = ? WHERE "tic_tac_toes"."id" = 1  [["current_player", "Player 2"], ["current_marker", "O"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "tic_tac_toes" SET "board" = ?, "updated_at" = ? WHERE "tic_tac_toes"."id" = 1[0m  [["board", "[[\"X\",null,null],[null,\"O\",null],[null,null,null]]"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "tic_tac_toes" SET "current_player" = ?, "current_marker" = ?, "updated_at" = ? WHERE "tic_tac_toes"."id" = 1  [["current_player", "Player 1"], ["current_marker", "X"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mUPDATE "tic_tac_toes" SET "board" = ?, "updated_at" = ? WHERE "tic_tac_toes"."id" = 1[0m  [["board", "[[\"X\",null,null],[null,\"O\",null],[null,null,\"X\"]]"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "tic_tac_toes" SET "current_player" = ?, "current_marker" = ?, "updated_at" = ? WHERE "tic_tac_toes"."id" = 1  [["current_player", "Player 2"], ["current_marker", "O"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.8ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "tic_tac_toes" SET "current_player" = ?, "current_marker" = ?, "updated_at" = ? WHERE "tic_tac_toes"."id" = 1[0m  [["current_player", "Player 2"], ["current_marker", "O"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "tic_tac_toes" SET "current_player" = ?, "current_marker" = ?, "updated_at" = ? WHERE "tic_tac_toes"."id" = 1  [["current_player", "Player 1"], ["current_marker", "X"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "tic_tac_toes" SET "game_state" = ?, "updated_at" = ? WHERE "tic_tac_toes"."id" = 1[0m  [["game_state", "won"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.5ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "tic_tac_toes" SET "game_state" = ?, "updated_at" = ? WHERE "tic_tac_toes"."id" = 1[0m  [["game_state", "tie"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.4ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.2ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[36m (0.0ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.3ms)[0m  rollback transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "tic_tac_toes" ("board", "created_at", "current_marker", "current_player", "player1", "player2", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["board", "[[null,null,null],[null,null,null],[null,null,null]]"], ["created_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00], ["current_marker", "X"], ["current_player", "Player 1"], ["player1", "Player 1"], ["player2", "Player 2"], ["updated_at", Thu, 28 Apr 2016 02:29:16 UTC +00:00]]
+  [1m[35m (0.0ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.3ms)[0m  [1mrollback transaction[0m
