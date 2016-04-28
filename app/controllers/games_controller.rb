@@ -1,4 +1,4 @@
-class TttController < ApplicationController
+class GamesController < ApplicationController
 
   def index
     redirect_to tic_tac_toes_path
