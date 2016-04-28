@@ -1,0 +1,34 @@
+<style>
+    .tile {
+        width: 25px;
+        height: 25px;
+        text-align: center;
+    }
+
+    table td {
+        border: 1px solid black;
+    }
+</style>
+<p>
+  Game: <%= @tic_tac_toe.id %> <%= @tic_tac_toe.game_state %>
+</p>
+
+<p>
+  Current Player: <%= @tic_tac_toe.current_player %>
+</p>
+
+<table>
+  <% JSON.parse(@tic_tac_toe.board).each_with_index do |r, ri| %>
+      <tr>
+        <% r.each_with_index do |c, ci| %>
+            <td class="tile">
+              <% if c.blank? && !@tic_tac_toe.game_over? %>
+                  <%= button_to '?', pick_tic_tac_to_path(id: @tic_tac_toe.id, x: ci, y: ri), method: :post, remote: true %>
+              <% else %>
+                  <%= c %>
+              <% end %>
+            </td>
+        <% end %>
+      </tr>
+  <% end %>
+</table>

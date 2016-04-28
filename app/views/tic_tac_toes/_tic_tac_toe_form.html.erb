@@ -1,0 +1,13 @@
+<%= form_for :tic_tac_toe, url: tic_tac_toes_path, remote: true do |t| %>
+    <p>
+      <%= t.label 'Player 1' %>
+      <%= t.text_field :player1 %>
+    </p>
+    <p>
+      <%= t.label 'Player 2' %>
+      <%= t.text_field :player2 %>
+    </p>
+    <p>
+      <%= t.submit 'Start!' %>
+    </p>
+<% end %>
