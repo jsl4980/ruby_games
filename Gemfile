@@ -6,6 +6,9 @@ gem 'rails', '4.2.0'
 # Use Postgresql as the database for Active Record
 gem 'pg'
 
+# Replace webrick with Puma
+gem 'puma'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
@@ -50,4 +53,4 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-ruby '2.2.5'
+ruby '2.2.4'
