@@ -41,6 +41,9 @@ group :development do
   gem 'rspec-rails'
 end
 
+# Specify a nokogiri version
+gem 'nokogiri', '~> 1.8'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
