@@ -19,7 +19,7 @@ class TicTacToe < ActiveRecord::Base
 
   def process_turn
     self.update_attributes(game_state: 'won') if self.game_won?
-    self.update_attributes(game_state: 'tie') if self.board_full?
+    self.update_attributes(game_state: 'tie') if self.board_full? && !self.game_won?
     swap_current_player if self.game_state.blank?
   end
 

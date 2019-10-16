@@ -69,6 +69,12 @@ RSpec.describe TicTacToe, type: :model do
       g.process_turn
       expect(g.game_state).to eq 'tie'
     end
+
+    it 'does marks game won when a player wins' do
+      g.board = [['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'X', 'O']]
+      g.process_turn
+      expect(g.game_state).to eq 'won' 
+    end
   end
 
   describe '#board_full?' do
@@ -111,7 +117,7 @@ RSpec.describe TicTacToe, type: :model do
           [[nil, 'X', nil], [nil, 'X', nil], [nil, 'X', nil]],
           [['X', 'X', 'O'], ['O', 'X', 'X'], ['O', 'X', 'O']],
           [['X', nil, nil], [nil, 'X', nil], [nil, nil, 'X']],
-          [[nil, nil, 'O'], [nil, 'O', nil], ['O', nil, 'X']],
+          [[nil, nil, 'O'], [nil, 'O', nil], ['O', nil, 'X']]
       ].each do |board|
         it "returns true for winning board: #{board}" do
           g.board = board.to_json
