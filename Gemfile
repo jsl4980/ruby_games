@@ -42,7 +42,7 @@ group :development do
 end
 
 # Specify a nokogiri version
-gem 'nokogiri', '~> 1.8'
+gem 'nokogiri', '~> 1.10.4'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -56,4 +56,4 @@ gem 'nokogiri', '~> 1.8'
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 
-ruby '2.2.10'
+ruby '2.3.8'
